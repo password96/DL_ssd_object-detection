@@ -1,27 +1,22 @@
-## SSD：Single-Shot MultiBox Detector目标检测模型在Pytorch当中的实现
+## 深度学习网络SSD：Single-Shot MultiBox Detector目标检测模型在Pytorch当中的实现
 ---
 
-## 目录
-1. [仓库更新 Top News](#仓库更新)
-2. [性能情况 Performance](#性能情况)
-3. [所需环境 Environment](#所需环境)
-4. [文件下载 Download](#文件下载)
-5. [训练步骤 How2train](#训练步骤)
-6. [预测步骤 How2predict](#预测步骤)
-7. [评估步骤 How2eval](#评估步骤)
-8. [参考资料 Reference](#Reference)
+## 目录 点击跳转到指定内容
+1. [性能情况 Performance](#性能情况)
+2. [所需环境 Environment](#所需环境)
+3. [文件下载 Download](#文件下载)
+4. [训练步骤 How2train](#训练步骤)
+5. [预测步骤 How2predict](#预测步骤)
+6. [评估步骤 How2eval](#评估步骤)
 
-## Top News
-**`2022-03`**:**进行了大幅度的更新，支持step、cos学习率下降法、支持adam、sgd优化器选择、支持学习率根据batch_size自适应调整、新增图片裁剪。**  
-BiliBili视频中的原仓库地址为：https://github.com/bubbliiiing/ssd-pytorch/tree/bilibili
 
-**`2021-10`**:**进行了大幅度的更新，增加了mobilenetv2主干的选择、增加大量注释、增加了大量可调整参数、对代码的组成模块进行修改、增加fps、视频预测、批量预测等功能。**   
+**支持step、cos学习率下降法、支持adam、sgd优化器选择、支持学习率根据batch_size自适应调整、新增图片裁剪。有mobilenetv2主干的选择、大量可调整参数。**  
 
 ## 性能情况
-| 训练数据集 | 权值文件名称 | 测试数据集 | 输入图片大小 | mAP 0.5:0.95 | mAP 0.5 |
-| :-----: | :-----: | :------: | :------: | :------: | :-----: |
-| VOC07+12 | [ssd_weights.pth](https://github.com/bubbliiiing/ssd-pytorch/releases/download/v1.0/ssd_weights.pth) | VOC-Test07 | 300x300| - | 78.55
-| VOC07+12 | [mobilenetv2_ssd_weights.pth](https://github.com/bubbliiiing/ssd-pytorch/releases/download/v1.0/mobilenetv2_ssd_weights.pth) | VOC-Test07 | 300x300| - | 71.32
+| 训练数据集 | 权值文件名称 | 测试数据集 | 输入图片大小 | mAP 0.5 |
+| :-----: | :-----: | :------: | :------: | :------: |
+| VOC07+12 | [ssd_weights.pth](https://github.com/bubbliiiing/ssd-pytorch/releases/download/v1.0/ssd_weights.pth) | VOC-Test07 | 300x300| 78.55
+| VOC07+12 | [mobilenetv2_ssd_weights.pth](https://github.com/bubbliiiing/ssd-pytorch/releases/download/v1.0/mobilenetv2_ssd_weights.pth) | VOC-Test07 | 300x300| 71.32
 
 ## 所需环境
 torch == 1.2.0
@@ -155,3 +150,4 @@ img/street.jpg
 ## Reference
 https://github.com/pierluigiferrari/ssd_keras  
 https://github.com/kuhung/SSD_keras  
+https://github.com/bubbliiiing/ssd-pytorch
